@@ -43,7 +43,7 @@ class DataHandler {
         int index = 0;
         this.printHeader();
         for (FifaData s : this.data)
-            System.out.printf("%-5d\t%-30s\t%-20s\t%20.2f\t%20.2f\t%25.2f\n", ++index,
+            System.out.printf("%-5d\t%-30s\t%-20s\t%20.2f %%\t%20.2f %%\t%25.2f %%\n", ++index,
                     s.getCountry(),
                     s.getConfederation(),
                     s.getPopulationShare(), s.getTvAudienceShare(), s.getGdpWeightedShare());
