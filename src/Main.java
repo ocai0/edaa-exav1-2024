@@ -10,31 +10,31 @@ public class Main {
         menu.addOption("Encerrar");
 
         Scanner scanner = new Scanner(System.in);
-        String option;
+        char option;
         do {
             menu.clear();
             menu.draw();
             menu.drawPrompt();
-            option = scanner.nextLine();
+            option = scanner.nextLine().charAt(0);
             switch (option) {
-                case "1":
+                case '1':
                     menu.clear();
                     fifaAudience.sortByCountryName();
                     fifaAudience.print();
                     System.out.printf("Aperte ENTER para voltar");
                     scanner.nextLine();
                     break;
-                case "2":
+                case '2':
                     menu.clear();
                     fifaAudience.sortByAudience();
                     fifaAudience.print();
                     System.out.printf("Aperte ENTER para voltar");
                     scanner.nextLine();
                     break;
-                case "3":
+                case '3':
                     break;
             }
-        } while (!option.equalsIgnoreCase("3"));
+        } while (option != '3');
         scanner.close();
     }
 }
